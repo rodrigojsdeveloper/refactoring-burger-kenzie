@@ -3,7 +3,7 @@ import { Container } from "./style";
 interface IButton {
   children: React.ReactNode;
   color: "green" | "grey";
-  size: "default" | "medium";
+  size: "default" | "large" | "medium";
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   type?: "button" | "submit" | "reset";
   disabled?: boolean;

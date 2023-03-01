@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 interface IButtonStyle {
   color: "green" | "grey";
-  size: "default" | "medium";
+  size: "default" | "large" | "medium";
 }
 
 const Container = styled.button<IButtonStyle>`
@@ -12,12 +12,14 @@ const Container = styled.button<IButtonStyle>`
   font-size: 16px;
   line-height: 19px;
 
+  border: none;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 
-  border-radius: 8px;
+  border-radius: 4px;
   transition: 0.5s;
   
   :disabled {
@@ -30,6 +32,12 @@ const Container = styled.button<IButtonStyle>`
       case "default":
         return css`
           max-width: 343px;
+          height: 60px;
+        `;
+
+      case "large":
+        return css`
+          max-width: 421px;
           height: 60px;
         `;
 
@@ -57,13 +65,13 @@ const Container = styled.button<IButtonStyle>`
 
       case "grey":
         return css`
-          background-color: var(--grey-100);
-          border-color: var(--grey-100);
+          background-color: var(--grey-20);
+          border-color: var(--grey-20);
           color: var(--grey-50);
 
           :hover {
-            background-color: var(--grey-300);
-            border-color: var(--grey-300);
+            background-color: var(--grey-50);
+            border-color: var(--grey-50);
             color: var(--grey-20);
           }
         `;

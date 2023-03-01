@@ -6,10 +6,11 @@ const InputContainer = styled.div`
   height: 60px;
 
   position: relative;
+  margin-bottom: 15px;
 
   &:focus-within label,
   &:not(:placeholder-shown) + label {
-    transform: translate(-0.5rem, -1.5rem) scale(0.8);
+    transform: translate(-0.5rem, -1.6rem) scale(0.8);
     color: var(--color-primary);
   }
 `;
