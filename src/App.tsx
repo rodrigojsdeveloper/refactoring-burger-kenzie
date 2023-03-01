@@ -1,9 +1,7 @@
-import { LogoDetails } from "./components/LogoDetails";
+import { AllRoutes } from "./routes";
 
 const App = () => {
-  return (
-    <LogoDetails />
-  )
-}
+  return <AllRoutes />;
+};
 
 export { App };
