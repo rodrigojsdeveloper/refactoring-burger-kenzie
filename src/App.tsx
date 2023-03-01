@@ -1,6 +1,8 @@
+import { LogoDetails } from "./components/LogoDetails";
+
 const App = () => {
   return (
-    <div></div>
+    <LogoDetails />
   )
 }
 

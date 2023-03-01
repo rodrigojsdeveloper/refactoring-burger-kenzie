@@ -14,6 +14,7 @@ export default createGlobalStyle`
     // Primary Palette
     --color-primary: #27AE60;
     --color-primary-50: #93D7AF;
+    --color-primary-100: #F6FFFA;
     --color-secondary: #EB5757;
 
     // Grey Scale Palette
