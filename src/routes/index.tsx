@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
+import { SignIn } from "../pages/SignIn";
 
 const AllRoutes = () => {
   return (
     <Routes>
-      <Route path="" element />
+      <Route path="" element={<SignIn />} />
     </Routes>
   );
 };

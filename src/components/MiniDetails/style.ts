@@ -23,12 +23,22 @@ const Container = styled.div`
   }
 
   & > p {
+    padding-left: 15px;
+
     font-size: 14px;
     font-weight: 400;
     line-height: 25px;
 
     width: 100%;
     max-width: 348px;
+
+    @media (max-width: 425px) {
+      line-height: 20px;
+    }
+
+    @media (max-width: 375px) {
+      font-size: 12px;
+    }
   }
 `;
 
