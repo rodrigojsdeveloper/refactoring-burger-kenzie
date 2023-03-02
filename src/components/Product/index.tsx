@@ -7,7 +7,7 @@ const Product = () => {
       <img />
 
       <div>
-        <h2>X-Burgue</h2>
+        <h3>X-Burgue</h3>
 
         <p>Sanduíches</p>
 

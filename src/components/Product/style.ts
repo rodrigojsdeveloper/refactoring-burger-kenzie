@@ -27,12 +27,12 @@ const Container = styled.div`
 
     padding: 16px 19px 23px 20px;
 
-    h2,
+    h3,
     span {
       line-height: 24px;
     }
 
-    & > h2 {
+    & > h3 {
       font-weight: 700;
       font-size: 18px;
     }
