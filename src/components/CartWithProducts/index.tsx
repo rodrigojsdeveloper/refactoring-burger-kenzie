@@ -1,17 +1,26 @@
-import { Button } from "../Button";
 import { ProductInCart } from "../ProductInCart";
+import { ICart } from "../../interfaces";
 import { Container } from "./style";
+import { Button } from "../Button";
 
-interface ICartWithProducts {
-  cartProducts: any[];
-}
-
-const CartWithProducts = ({ cartProducts }: ICartWithProducts) => {
+const CartWithProducts = ({
+  cartProducts,
+  clearAllProducts,
+  handleClickCartProduct,
+  handleRemoveCartProducts,
+  handleListCartProducts,
+}: ICart) => {
   return (
     <Container>
       <menu>
         {cartProducts.map((product) => (
-          <ProductInCart product={product} key={product.id} />
+          <ProductInCart
+            product={product}
+            key={product.id}
+            handleClickCartProduct={handleClickCartProduct}
+            handleRemoveCartProducts={handleRemoveCartProducts}
+            handleListCartProducts={handleListCartProducts}
+          />
         ))}
       </menu>
 
@@ -19,10 +28,20 @@ const CartWithProducts = ({ cartProducts }: ICartWithProducts) => {
         <div>
           <p>Total</p>
 
-          <span>R$ 40,00</span>
+          <span>
+            R${" "}
+            {cartProducts
+              .reduce(
+                (valorAnterior, valorAtual) =>
+                  valorAnterior + Number(valorAtual.price * valorAtual.count),
+                0
+              )
+              .toFixed(2)
+              .replace(".", ",")}
+          </span>
         </div>
 
-        <Button size="default" color="grey">
+        <Button size="default" color="grey" onClick={clearAllProducts}>
           Remover todos
         </Button>
       </div>

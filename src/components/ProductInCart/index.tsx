@@ -1,13 +1,17 @@
+import { IProductComponent } from "../../interfaces";
 import { Container } from "./style";
 
-interface IProductInCart {
-  product: any;
-}
-
-const ProductInCart = ({ product }: IProductInCart) => {
+const ProductInCart = ({
+  product,
+  handleClickCartProduct,
+  handleListCartProducts,
+  handleRemoveCartProducts,
+}: IProductComponent) => {
   return (
     <Container>
-      <img src={product.img} alt={product.name} />
+      <figure>
+        <img src={product.img} alt={product.name} />
+      </figure>
 
       <div>
         <div>
@@ -15,7 +19,25 @@ const ProductInCart = ({ product }: IProductInCart) => {
           <p>{product.category}</p>
         </div>
 
-        <p>Remover</p>
+        <div>
+          <p onClick={() => handleClickCartProduct(product)}>Remover</p>
+
+          <div>
+            <button
+              className="botaoMais"
+              onClick={() => handleListCartProducts(product)}
+            >
+              +
+            </button>
+            <span>{product.count}</span>
+            <button
+              className="botaoMenos"
+              onClick={() => handleRemoveCartProducts(product)}
+            >
+              -
+            </button>
+          </div>
+        </div>
       </div>
     </Container>
   );
