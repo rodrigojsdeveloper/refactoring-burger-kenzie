@@ -1,8 +1,11 @@
-import { Button } from "../Button";
+import { useNavigate } from "react-router-dom";
 import { CustomInput } from "../Input";
 import { Container } from "./style";
+import { Button } from "../Button";
 
 const FormSignIn = () => {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <h2>Login</h2>
@@ -18,7 +21,7 @@ const FormSignIn = () => {
             Entrar
           </Button>
           <p>Crie sua conta para saborear muitas delícias e matar sua fome!</p>
-          <Button color="grey" size="large">
+          <Button color="grey" size="large" onClick={() => navigate("/signup")}>
             Cadastrar
           </Button>
         </div>
