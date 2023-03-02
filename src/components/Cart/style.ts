@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 365px;
+  min-width: 365px;
   height: 223px;
 
   & > div:nth-child(1) {
@@ -51,6 +51,15 @@ const Container = styled.div`
 
       color: var(--grey-50);
     }
+  }
+
+  @media (max-width: 1300px) {
+    padding-top: 20px;
+    margin: 0 auto;
+
+    min-width: unset;
+    width: 100%;
+    max-width: 365px;
   }
 `;
 

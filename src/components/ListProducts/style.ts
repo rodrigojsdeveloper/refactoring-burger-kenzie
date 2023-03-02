@@ -5,10 +5,11 @@ const Container = styled.menu`
   max-width: 960px;
 
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 
-  @media screen and (max-width: 1024px) {
+  margin: 0 auto;
+
+  @media screen and (max-width: 1300px) {
     flex-wrap: nowrap;
     overflow-x: scroll;
     justify-content: unset;

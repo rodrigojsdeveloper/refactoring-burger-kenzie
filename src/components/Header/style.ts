@@ -60,7 +60,7 @@ const Container = styled.header`
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1300px) {
     padding: 14.28px 16px 14px 16px;
 
     & > div {

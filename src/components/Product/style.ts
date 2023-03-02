@@ -8,7 +8,7 @@ const Container = styled.div`
   background-color: var(--white);
   border: 2px solid var(--grey-20);
 
-  margin: 12px 10px;
+  margin: 6px 20px 6px 0;
 
   & > img {
     width: 100%;
@@ -57,7 +57,7 @@ const Container = styled.div`
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1300px) {
     min-width: 300px;
   }
 `;
