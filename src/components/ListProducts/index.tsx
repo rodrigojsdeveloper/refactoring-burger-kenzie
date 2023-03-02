@@ -1,17 +1,18 @@
-import { Product } from '../Product'
-import { Container } from './style'
+import { Product } from "../Product";
+import { Container } from "./style";
 
-const ListProducts = () => {
-  return (
-    <Container>
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-      <Product />
-    </Container>
-  )
+interface IListProducts {
+  products: any;
 }
 
-export { ListProducts }
+const ListProducts = ({ products }: IListProducts) => {
+  return (
+    <Container>
+      {products.map((product: any) => (
+        <Product product={product} key={product.id} />
+      ))}
+    </Container>
+  );
+};
+
+export { ListProducts };

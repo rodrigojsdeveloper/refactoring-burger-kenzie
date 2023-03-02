@@ -26,9 +26,9 @@ const FormSignIn = () => {
     setLoad(true);
 
     api
-      .post("users/login", data)
+      .post("login", data)
       .then((res) => {
-        sessionStorage.setItem("Burger Kenzie: token", res.data.token);
+        sessionStorage.setItem("Burger Kenzie: token", res.data.accessToken);
 
         navigate("/dashboard");
       })

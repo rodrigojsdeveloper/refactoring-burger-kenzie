@@ -1,17 +1,23 @@
 import { Container } from "./style";
 import { Button } from "../Button";
 
-const Product = () => {
+interface IProduct {
+  product: any;
+}
+
+const Product = ({ product }: IProduct) => {
   return (
     <Container>
-      <img />
+      <figure>
+        <img src={product.img} alt={product.name} />
+      </figure>
 
       <div>
-        <h3>X-Burgue</h3>
+        <h3>{product.name}</h3>
 
-        <p>Sanduíches</p>
+        <p>{product.category}</p>
 
-        <span>R$ 16.00</span>
+        <span>R$ {product.price.toFixed(2).replace(".", ",")}</span>
 
         <Button size="medium" color="green">
           Adicionar
