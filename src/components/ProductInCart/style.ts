@@ -55,9 +55,10 @@ const Container = styled.div`
       line-height: 15px;
 
       cursor: pointer;
-      color: var(--grey-20);
+      color: var(--grey-10);
 
       &:hover {
+        color: var(--grey-50);
         text-decoration: underline;
       }
     }

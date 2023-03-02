@@ -14,6 +14,7 @@ const Container = styled.div`
     width: 100%;
     height: 150px;
 
+    border-radius: 5px 5px 0 0;
     background-color: var(--grey-0);
   }
 
@@ -59,6 +60,14 @@ const Container = styled.div`
 
   @media (max-width: 1300px) {
     min-width: 300px;
+  }
+
+  @media (min-width: 1300px) {
+    &:hover {
+      border-color: var(--gray-100);
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
   }
 `;
 
