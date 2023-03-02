@@ -3,9 +3,10 @@ import { Button } from "../Button";
 
 interface IProduct {
   product: any;
+  handleListCartProducts: (product: any) => any[];
 }
 
-const Product = ({ product }: IProduct) => {
+const Product = ({ product, handleListCartProducts }: IProduct) => {
   return (
     <Container>
       <figure>
@@ -19,7 +20,11 @@ const Product = ({ product }: IProduct) => {
 
         <span>R$ {product.price.toFixed(2).replace(".", ",")}</span>
 
-        <Button size="medium" color="green">
+        <Button
+          size="medium"
+          color="green"
+          onClick={() => handleListCartProducts(product)}
+        >
           Adicionar
         </Button>
       </div>

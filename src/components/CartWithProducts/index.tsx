@@ -2,15 +2,17 @@ import { Button } from "../Button";
 import { ProductInCart } from "../ProductInCart";
 import { Container } from "./style";
 
-const CartWithProducts = () => {
+interface ICartWithProducts {
+  cartProducts: any[];
+}
+
+const CartWithProducts = ({ cartProducts }: ICartWithProducts) => {
   return (
     <Container>
       <menu>
-        <ProductInCart />
-        <ProductInCart />
-        <ProductInCart />
-        <ProductInCart />
-        <ProductInCart />
+        {cartProducts.map((product) => (
+          <ProductInCart product={product} key={product.id} />
+        ))}
       </menu>
 
       <div>

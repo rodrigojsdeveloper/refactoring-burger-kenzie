@@ -8,8 +8,7 @@ const InputContainer = styled.div`
   position: relative;
   margin-bottom: 15px;
 
-  &:focus-within label,
-  &:not(:placeholder-shown) + label {
+  input:focus + label {
     transform: translate(-0.5rem, -1.6rem) scale(0.8);
     color: var(--color-primary);
   }
@@ -50,6 +49,11 @@ const Label = styled.label`
   pointer-events: none;
   transition: transform 0.2s ease-in-out, color 0.2s ease-in-out,
     font-size 0.2s ease-in-out, top 0.2s ease-in-out;
+
+  &.has-value {
+    transform: translate(-0.5rem, -1.6rem) scale(0.8);
+    color: var(--grey-50);
+  }
 `;
 
 export { InputContainer, Input, Label };
