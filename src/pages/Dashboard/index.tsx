@@ -16,6 +16,8 @@ const Dashboard = () => {
 
   const [cartProducts, setCartProducts] = useState<IProduct[]>([]);
 
+  const [filteredProducts, setFilteredProducts] = useState<IProduct[]>([]);
+
   useEffect(() => {
     api
       .get("products", {
@@ -74,11 +76,11 @@ const Dashboard = () => {
 
   return (
     <Container>
-      <Header />
+      <Header setFilteredProducts={setFilteredProducts} products={products} />
       <div>
         <div>
           <ListProducts
-            products={products}
+            products={filteredProducts.length > 0 ? filteredProducts : products}
             handleListCartProducts={handleListCartProducts}
           />
           <Cart

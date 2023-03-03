@@ -27,3 +27,8 @@ export interface ICart {
   handleRemoveCartProducts: (product: IProduct) => void;
   handleListCartProducts: (product: IProduct) => void;
 }
+
+export interface IHeader {
+  products: IProduct[];
+  setFilteredProducts: React.Dispatch<React.SetStateAction<IProduct[]>>;
+}

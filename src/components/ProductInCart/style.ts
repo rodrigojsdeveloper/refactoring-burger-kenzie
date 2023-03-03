@@ -42,6 +42,18 @@ const Container = styled.div`
         line-height: 24px;
 
         padding-bottom: 10px;
+
+        @media (max-width: 1300px) {
+          width: 100%;
+          max-width: 100px;
+          height: 25px;
+
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
       }
 
       & > p {
