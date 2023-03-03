@@ -1,6 +1,6 @@
 import logo from "../../assets/LogoKenzieBurguer.svg";
 import { IHeader } from "../../interfaces";
-import { Container } from "./style";
+import { Container, Input, SearchContainer } from "./style";
 import { Button } from "../Button";
 import { useState } from "react";
 
@@ -12,8 +12,8 @@ const Header = ({ products, setFilteredProducts }: IHeader) => {
       <div>
         <img src={logo} alt="burger kenzie" />
 
-        <div>
-          <input
+        <SearchContainer>
+          <Input
             type="text"
             placeholder="Digitar Pesquisa"
             value={valueInput}
@@ -38,7 +38,7 @@ const Header = ({ products, setFilteredProducts }: IHeader) => {
           >
             Pesquisar
           </Button>
-        </div>
+        </SearchContainer>
       </div>
     </Container>
   );
