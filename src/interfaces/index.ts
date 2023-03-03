@@ -15,6 +15,11 @@ export interface IProductComponent {
   handleRemoveCartProducts: (product: IProduct) => void;
 }
 
+export interface IProductProps {
+  product: IProduct;
+  handleListCartProducts: (product: IProduct) => void;
+}
+
 export interface IListProducts {
   products: IProduct[];
   handleListCartProducts: (product: IProduct) => void;

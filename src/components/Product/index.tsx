@@ -1,8 +1,8 @@
-import { IProductComponent } from "../../interfaces";
+import { IProductProps } from "../../interfaces";
 import { Container } from "./style";
 import { Button } from "../Button";
 
-const Product = ({ product, handleListCartProducts }: IProductComponent) => {
+const Product = ({ product, handleListCartProducts }: IProductProps) => {
   return (
     <Container>
       <figure>
