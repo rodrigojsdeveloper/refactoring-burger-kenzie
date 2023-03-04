@@ -111,7 +111,7 @@ const Container = styled.div`
           width: 20px;
           height: 20px;
 
-          padding: 1px 12px 0px 12px;
+          padding: 0.5px 12px 0.5px 12px;
 
           font-size: 14px;
           font-weight: 500;

@@ -9,14 +9,14 @@ const Container = styled.menu`
 
   margin: 0 auto;
 
-	::-webkit-scrollbar {
-		width: 2.5px;
-	}
+  ::-webkit-scrollbar {
+    width: 2.5px;
+  }
 
-  &::-webkit-scrollbar-thumb {
-		border-radius: 4px;
-  	background: var(--color-primary); 
-	}
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: var(--color-primary);
+  }
 
   @media screen and (max-width: 1300px) {
     flex-wrap: nowrap;
