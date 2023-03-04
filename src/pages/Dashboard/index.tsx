@@ -35,7 +35,7 @@ const Dashboard = () => {
     }
   }, [token]);
 
-  const handleListCartProducts = (product: IProduct) => {
+  const handleAddToCart = (product: IProduct) => {
     const findProduct = cartProducts.find((p) => p.id === product.id);
 
     if (!findProduct) {
@@ -53,7 +53,7 @@ const Dashboard = () => {
     }
   };
 
-  const handleRemoveCartProducts = (product: IProduct) => {
+  const handleRemoveFromCart = (product: IProduct) => {
     if (product.count > 1) {
       const indexProduct = cartProducts.indexOf(product);
 
@@ -72,7 +72,7 @@ const Dashboard = () => {
   const handleClickCartProduct = (product: IProduct) =>
     setCartProducts(cartProducts.filter((p) => p.id !== product.id));
 
-  const clearAllProducts = () => setCartProducts([]);
+  const handleClearCart = () => setCartProducts([]);
 
   return (
     <Container>
@@ -81,14 +81,14 @@ const Dashboard = () => {
         <div>
           <ListProducts
             products={filteredProducts.length > 0 ? filteredProducts : products}
-            handleListCartProducts={handleListCartProducts}
+            handleListCartProducts={handleAddToCart}
           />
           <Cart
             cartProducts={cartProducts}
             handleClickCartProduct={handleClickCartProduct}
-            clearAllProducts={clearAllProducts}
-            handleRemoveCartProducts={handleRemoveCartProducts}
-            handleListCartProducts={handleListCartProducts}
+            handleRemoveCartProducts={handleRemoveFromCart}
+            clearAllProducts={handleClearCart}
+            handleListCartProducts={handleAddToCart}
           />
         </div>
       </div>
