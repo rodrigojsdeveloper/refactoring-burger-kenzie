@@ -34,3 +34,20 @@ export interface IProduct {
 export interface IProductComponent {
   product: IProduct;
 }
+
+export interface IProductContextData {
+  products: IProduct[];
+  setProducts: React.Dispatch<React.SetStateAction<IProduct[]>>;
+  cartProducts: IProduct[];
+  setCartProducts: React.Dispatch<React.SetStateAction<IProduct[]>>;
+  filteredProducts: IProduct[];
+  setFilteredProducts: React.Dispatch<React.SetStateAction<IProduct[]>>;
+  handleAddToCart: (product: IProduct) => void;
+  handleRemoveFromCart: (product: IProduct) => void;
+  handleClickCartProduct: (product: IProduct) => void;
+  handleClearCart: () => void;
+}
+
+export interface IProductContextProvider {
+  children: React.ReactNode;
+}

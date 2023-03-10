@@ -1,10 +1,7 @@
 import { ProductContextProvider } from "./ProductContext";
+import { IProductContextProvider } from "../interfaces";
 
-type Providers = {
-  children: React.ReactNode;
-};
-
-const Providers = ({ children }: Providers) => {
+const Providers = ({ children }: IProductContextProvider) => {
   return <ProductContextProvider>{children}</ProductContextProvider>;
 };
 

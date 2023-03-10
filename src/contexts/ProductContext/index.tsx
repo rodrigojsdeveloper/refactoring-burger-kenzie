@@ -1,29 +1,16 @@
-import React, { createContext, useEffect, useState } from "react";
-import { IProduct } from "../../interfaces";
+import { createContext, useEffect, useState } from "react";
 import { api } from "../../services/api";
+import {
+  IProduct,
+  IProductContextData,
+  IProductContextProvider,
+} from "../../interfaces";
 
-type ProductContextData = {
-  products: IProduct[];
-  setProducts: React.Dispatch<React.SetStateAction<IProduct[]>>;
-  cartProducts: IProduct[];
-  setCartProducts: React.Dispatch<React.SetStateAction<IProduct[]>>;
-  filteredProducts: IProduct[];
-  setFilteredProducts: React.Dispatch<React.SetStateAction<IProduct[]>>;
-  handleAddToCart: (product: IProduct) => void;
-  handleRemoveFromCart: (product: IProduct) => void;
-  handleClickCartProduct: (product: IProduct) => void;
-  handleClearCart: () => void;
-};
-
-type ProductContextProvider = {
-  children: React.ReactNode;
-};
-
-export const ProductContext = createContext({} as ProductContextData);
+export const ProductContext = createContext({} as IProductContextData);
 
 export const ProductContextProvider = ({
   children,
-}: ProductContextProvider) => {
+}: IProductContextProvider) => {
   const token = sessionStorage.getItem("Burger Kenzie: token");
 
   const [products, setProducts] = useState<IProduct[]>([]);
