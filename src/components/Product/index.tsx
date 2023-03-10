@@ -1,8 +1,12 @@
-import { IProductProps } from "../../interfaces";
+import { ProductContext } from "../../context/ProductContext";
+import { IProductComponent } from "../../interfaces";
 import { Container } from "./style";
 import { Button } from "../Button";
+import { useContext } from "react";
 
-const Product = ({ product, handleListCartProducts }: IProductProps) => {
+const Product = ({ product }: IProductComponent) => {
+  const { handleAddToCart } = useContext(ProductContext);
+
   return (
     <Container>
       <figure>
@@ -19,7 +23,7 @@ const Product = ({ product, handleListCartProducts }: IProductProps) => {
         <Button
           size="medium"
           color="green"
-          onClick={() => handleListCartProducts(product)}
+          onClick={() => handleAddToCart(product)}
         >
           Adicionar
         </Button>

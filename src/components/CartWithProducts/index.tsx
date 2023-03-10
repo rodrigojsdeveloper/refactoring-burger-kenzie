@@ -1,26 +1,17 @@
+import { ProductContext } from "../../context/ProductContext";
 import { ProductInCart } from "../ProductInCart";
-import { ICart } from "../../interfaces";
 import { Container } from "./style";
 import { Button } from "../Button";
+import { useContext } from "react";
 
-const CartWithProducts = ({
-  cartProducts,
-  clearAllProducts,
-  handleClickCartProduct,
-  handleRemoveCartProducts,
-  handleListCartProducts,
-}: ICart) => {
+const CartWithProducts = () => {
+  const { cartProducts, handleClearCart } = useContext(ProductContext);
+
   return (
     <Container>
       <menu>
         {cartProducts.map((product) => (
-          <ProductInCart
-            product={product}
-            key={product.id}
-            handleClickCartProduct={handleClickCartProduct}
-            handleRemoveCartProducts={handleRemoveCartProducts}
-            handleListCartProducts={handleListCartProducts}
-          />
+          <ProductInCart product={product} key={product.id} />
         ))}
       </menu>
 
@@ -41,7 +32,7 @@ const CartWithProducts = ({
           </span>
         </div>
 
-        <Button size="default" color="grey" onClick={clearAllProducts}>
+        <Button size="default" color="grey" onClick={handleClearCart}>
           Remover todos
         </Button>
       </div>

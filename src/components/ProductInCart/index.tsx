@@ -1,12 +1,12 @@
+import { ProductContext } from "../../context/ProductContext";
 import { IProductComponent } from "../../interfaces";
 import { Container } from "./style";
+import { useContext } from "react";
 
-const ProductInCart = ({
-  product,
-  handleClickCartProduct,
-  handleListCartProducts,
-  handleRemoveCartProducts,
-}: IProductComponent) => {
+const ProductInCart = ({ product }: IProductComponent) => {
+  const { handleClickCartProduct, handleRemoveFromCart, handleAddToCart } =
+    useContext(ProductContext);
+
   return (
     <Container>
       <figure>
@@ -25,14 +25,14 @@ const ProductInCart = ({
           <div>
             <button
               className="botaoMais"
-              onClick={() => handleListCartProducts(product)}
+              onClick={() => handleAddToCart(product)}
             >
               +
             </button>
             <span>{product.count}</span>
             <button
               className="botaoMenos"
-              onClick={() => handleRemoveCartProducts(product)}
+              onClick={() => handleRemoveFromCart(product)}
             >
               -
             </button>

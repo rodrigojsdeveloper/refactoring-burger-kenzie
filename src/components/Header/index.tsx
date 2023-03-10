@@ -1,10 +1,13 @@
+import { ProductContext } from "../../context/ProductContext";
 import { Container, Input, SearchContainer } from "./style";
 import logo from "../../assets/LogoKenzieBurguer.svg";
+import { useContext, useState } from "react";
 import { IHeader } from "../../interfaces";
 import { Button } from "../Button";
-import { useState } from "react";
 
-const Header = ({ products, setFilteredProducts }: IHeader) => {
+const Header = ({ products }: IHeader) => {
+  const { setFilteredProducts } = useContext(ProductContext);
+
   const [valueInput, setValueInput] = useState<string>("");
 
   return (
