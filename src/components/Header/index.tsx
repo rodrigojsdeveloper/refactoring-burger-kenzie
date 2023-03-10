@@ -1,4 +1,4 @@
-import { ProductContext } from "../../context/ProductContext";
+import { ProductContext } from "../../contexts/ProductContext";
 import { Container, Input, SearchContainer } from "./style";
 import logo from "../../assets/LogoKenzieBurguer.svg";
 import { useContext, useState } from "react";

@@ -1,4 +1,4 @@
-import { ProductContext } from "../../context/ProductContext";
+import { ProductContext } from "../../contexts/ProductContext";
 import { IProduct } from "../../interfaces";
 import { Product } from "../Product";
 import { Container } from "./style";
