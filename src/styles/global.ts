@@ -7,7 +7,6 @@ export default createGlobalStyle`
 		outline: 0;
 		box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-		scroll-behavior: smooth;
 	}
 
 	:root {
@@ -44,4 +43,8 @@ export default createGlobalStyle`
   a {
 		text-decoration: none;
 	}
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;

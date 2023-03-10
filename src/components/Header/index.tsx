@@ -1,6 +1,6 @@
+import { Container, Input, SearchContainer } from "./style";
 import logo from "../../assets/LogoKenzieBurguer.svg";
 import { IHeader } from "../../interfaces";
-import { Container, Input, SearchContainer } from "./style";
 import { Button } from "../Button";
 import { useState } from "react";
 

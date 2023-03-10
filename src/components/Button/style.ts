@@ -1,9 +1,5 @@
 import styled, { css } from "styled-components";
-
-interface IButtonStyle {
-  color: "green" | "grey";
-  size: "default" | "large" | "medium";
-}
+import { IButtonStyle } from "../../interfaces";
 
 const Container = styled.button<IButtonStyle>`
   width: 100%;
@@ -21,7 +17,7 @@ const Container = styled.button<IButtonStyle>`
 
   border-radius: 4px;
   transition: 0.5s;
-  
+
   :disabled {
     opacity: 0.5;
     cursor: not-allowed;

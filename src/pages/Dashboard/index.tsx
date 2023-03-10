@@ -1,8 +1,9 @@
 import { ListProducts } from "../../components/ListProducts";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import React, { useEffect, useState } from "react";
 import { Header } from "../../components/Header";
 import { useNavigate } from "react-router-dom";
 import { Cart } from "../../components/Cart";
-import { useEffect, useState } from "react";
 import { IProduct } from "../../interfaces";
 import { api } from "../../services/api";
 import { Container } from "./style";
@@ -75,24 +76,31 @@ const Dashboard = () => {
   const handleClearCart = () => setCartProducts([]);
 
   return (
-    <Container>
-      <Header setFilteredProducts={setFilteredProducts} products={products} />
-      <div>
+    <React.Fragment>
+      <HelmetProvider>
+        <Helmet title="Burger Kenzie" />
+      </HelmetProvider>
+      <Container>
+        <Header setFilteredProducts={setFilteredProducts} products={products} />
         <div>
-          <ListProducts
-            products={filteredProducts.length > 0 ? filteredProducts : products}
-            handleListCartProducts={handleAddToCart}
-          />
-          <Cart
-            cartProducts={cartProducts}
-            handleClickCartProduct={handleClickCartProduct}
-            handleRemoveCartProducts={handleRemoveFromCart}
-            clearAllProducts={handleClearCart}
-            handleListCartProducts={handleAddToCart}
-          />
+          <div>
+            <ListProducts
+              products={
+                filteredProducts.length > 0 ? filteredProducts : products
+              }
+              handleListCartProducts={handleAddToCart}
+            />
+            <Cart
+              cartProducts={cartProducts}
+              handleClickCartProduct={handleClickCartProduct}
+              handleRemoveCartProducts={handleRemoveFromCart}
+              clearAllProducts={handleClearCart}
+              handleListCartProducts={handleAddToCart}
+            />
+          </div>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </React.Fragment>
   );
 };
 

@@ -1,13 +1,6 @@
-import { useState } from "react";
-import { FieldValues, UseFormRegister } from "react-hook-form";
 import { InputContainer, Input, Label } from "./style";
-
-interface InputProps {
-  label: string;
-  type: string;
-  register: UseFormRegister<FieldValues>;
-  name: string;
-}
+import { InputProps } from "../../interfaces";
+import { useState } from "react";
 
 const CustomInput = ({ label, type, register, name }: InputProps) => {
   const [hasValue, setHasValue] = useState<boolean>(false);
