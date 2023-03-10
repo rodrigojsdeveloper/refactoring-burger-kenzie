@@ -34,7 +34,3 @@ export interface IProduct {
 export interface IProductComponent {
   product: IProduct;
 }
-
-export interface IHeader {
-  products: IProduct[];
-}
