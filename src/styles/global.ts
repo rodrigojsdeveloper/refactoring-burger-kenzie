@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
 	* {
+    border: 0;
 		margin: 0;
 		padding: 0;
 		outline: 0;
@@ -32,8 +33,8 @@ export default createGlobalStyle`
 	}
 
 	body {
-    background-color: var(--white);
     color: var(--gray-100);
+    background-color: var(--white);
 	}
 	
   button, a {

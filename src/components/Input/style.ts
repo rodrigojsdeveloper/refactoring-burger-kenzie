@@ -6,25 +6,26 @@ const InputContainer = styled.div`
   height: 60px;
 
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 
   input:focus + label {
-    transform: translate(-0.5rem, -1.6rem) scale(0.8);
+    transform: translate(-0.5rem, -1.7rem) scale(0.8);
     color: var(--color-primary);
   }
 `;
 
 const Input = styled.input`
   width: 100%;
+  height: 55px;
 
   font-weight: 500;
-  font-size: 16px;
-
-  padding: 18px;
-  border: 1px solid var(--grey-20);
-  outline: none;
+  font-size: 14px;
+  line-height: 18px;
 
   border-radius: 4px;
+  border: 1px solid var(--grey-20);
+
+  padding: 12px;
   transition: border-color 0.2s ease-in-out;
 
   &:focus {
@@ -40,18 +41,23 @@ const Input = styled.input`
 
 const Label = styled.label`
   position: absolute;
-  top: 18px;
-  left: 15px;
-  font-size: 18px;
+  top: 20px;
+  left: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+
   color: var(--grey-50);
   background-color: var(--white);
+
   padding: 0 5px;
   pointer-events: none;
   transition: transform 0.2s ease-in-out, color 0.2s ease-in-out,
     font-size 0.2s ease-in-out, top 0.2s ease-in-out;
 
   &.has-value {
-    transform: translate(-0.5rem, -1.6rem) scale(0.8);
+    transform: translate(-0.5rem, -1.7rem) scale(0.8);
     color: var(--grey-50);
   }
 `;

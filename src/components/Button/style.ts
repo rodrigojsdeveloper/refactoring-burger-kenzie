@@ -8,8 +8,6 @@ const Container = styled.button<IButtonStyle>`
   font-size: 16px;
   line-height: 19px;
 
-  border: none;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
