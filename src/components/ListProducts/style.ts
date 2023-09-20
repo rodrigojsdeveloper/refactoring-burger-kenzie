@@ -6,22 +6,13 @@ const Container = styled.menu`
 
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 
-  margin: 0 auto;
+  padding-right: 10px;
 
-  ::-webkit-scrollbar {
-    width: 2.5px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background: var(--color-primary);
-  }
-
-  @media screen and (max-width: 1300px) {
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    justify-content: unset;
+  @media (max-width: 1300px) {
+    margin: 0 auto;
   }
 `;
 

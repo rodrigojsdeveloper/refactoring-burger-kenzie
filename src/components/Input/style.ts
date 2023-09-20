@@ -22,8 +22,8 @@ const Input = styled.input`
   font-size: 14px;
   line-height: 18px;
 
-  border-radius: 4px;
   border: 1px solid var(--grey-20);
+  border-radius: var(--border-radius);
 
   padding: 12px;
   transition: border-color 0.2s ease-in-out;

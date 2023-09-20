@@ -13,7 +13,7 @@ const Container = styled.div`
 
     & > div {
       width: 100%;
-      max-width: 1375.82px;
+      max-width: 1440px;
 
       display: flex;
       flex-direction: row;

@@ -4,19 +4,19 @@ const Container = styled.div`
   width: 100%;
   height: 465px;
 
-  border-radius: 0px 0px 5px 5px;
   background-color: var(--grey-0);
-
-  ::-webkit-scrollbar {
-    display: none;
-  }
+  border-radius: 0px 0px var(--border-radius) var(--border-radius);
 
   & > menu {
     width: 100%;
     height: 323px;
 
     padding: 0 10px;
-    overflow: scroll;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar-track {
+      background-color: var(--grey-0) !important;
+    }
   }
 
   & > div {

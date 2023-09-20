@@ -7,8 +7,8 @@ const Container = styled.div`
     width: 100%;
     height: 65px;
 
-    border-radius: 5px 5px 0px 0px;
     background-color: var(--color-primary);
+    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
 
     padding: 22px 20px 13px 20px;
 

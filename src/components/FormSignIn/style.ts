@@ -12,8 +12,8 @@ const Container = styled.form`
   justify-content: space-between;
   align-items: flex-start;
 
-  border-radius: 4px;
   border: 1.5px solid var(--grey-20);
+  border-radius: var(--border-radius);
 
   & > div {
     width: 100%;

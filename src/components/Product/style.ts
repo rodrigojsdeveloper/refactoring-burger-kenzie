@@ -1,21 +1,20 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 346px;
 
-  border-radius: 5px;
   background-color: var(--white);
   border: 2px solid var(--grey-20);
-
-  margin: 6px 20px 6px 0;
+  border-radius: var(--border-radius);
 
   & > figure {
     width: 100%;
     height: 150px;
 
-    border-radius: 5px 5px 0 0;
     background-color: var(--grey-0);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
 
     display: flex;
     flex-direction: row;
@@ -59,18 +58,6 @@ const Container = styled.div`
       color: var(--color-primary);
 
       padding: 14px 0;
-    }
-  }
-
-  @media (max-width: 1300px) {
-    min-width: 300px;
-  }
-
-  @media (min-width: 1300px) {
-    &:hover {
-      border-color: var(--gray-100);
-      transform: scale(1.1);
-      transition: 0.5s;
     }
   }
 `;

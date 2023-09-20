@@ -11,8 +11,8 @@ const Container = styled.div`
 
   padding: 10px;
 
-  border-radius: 0px 0px 5px 5px;
   background-color: var(--grey-0);
+  border-radius: 0px 0px var(--border-radius) var(--border-radius);
 
   & > b {
     font-weight: 700;

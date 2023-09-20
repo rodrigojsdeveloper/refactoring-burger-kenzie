@@ -13,8 +13,8 @@ const Container = styled.button<IButtonStyle>`
   justify-content: center;
   align-items: center;
 
-  border-radius: 4px;
   transition: 0.5s;
+  border-radius: var(--border-radius);
 
   :disabled {
     opacity: 0.5;
@@ -64,9 +64,8 @@ const Container = styled.button<IButtonStyle>`
           color: var(--grey-50);
 
           :hover {
-            background-color: var(--grey-50);
-            border-color: var(--grey-50);
-            color: var(--grey-20);
+            background-color: var(--grey-10);
+            border-color: var(--grey-10);
           }
         `;
 

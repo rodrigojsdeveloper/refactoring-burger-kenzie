@@ -8,6 +8,7 @@ export default createGlobalStyle`
 		outline: 0;
 		box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+		scroll-behavior: smooth;
 	}
 
 	:root {
@@ -30,6 +31,9 @@ export default createGlobalStyle`
     --warning: #FFCD07;
     --sucess: #168821;
     --information: #155BCB;
+
+    // Border Radius
+    --border-radius: 2px
 	}
 
 	body {
@@ -45,7 +49,16 @@ export default createGlobalStyle`
 		text-decoration: none;
 	}
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  ::-webkit-scrollbar {
+  	width: 6px;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: var(--white);
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 0.5px;
+		background-color: var(--grey-20);
+	}
 `;

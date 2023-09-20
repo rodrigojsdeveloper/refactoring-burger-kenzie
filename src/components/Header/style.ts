@@ -30,9 +30,9 @@ const SearchContainer = styled.div`
   flex-direction: row;
   align-items: center;
 
-  border-radius: 8px;
   background-color: var(--white);
   border: 2px solid var(--grey-20);
+  border-radius: var(--border-radius);
 
   padding: 10px 10px 10px 15px;
 
@@ -55,7 +55,7 @@ const Container = styled.header`
 
   & > div {
     width: 100%;
-    max-width: 1375.82px;
+    max-width: 1440px;
     height: 80px;
 
     display: flex;

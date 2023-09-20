@@ -13,8 +13,8 @@ const Container = styled.div`
     width: 80px;
     height: 80px;
 
-    border-radius: 5px;
     background-color: var(--grey-20);
+    border-radius: var(--border-radius);
 
     display: flex;
     flex-direction: row;
@@ -94,17 +94,13 @@ const Container = styled.div`
         }
 
         & > button {
-          border: 1px solid var(--grey-20);
-          padding: 0 4px;
-          background: transparent;
-
           width: 20px;
           height: 20px;
-        }
 
-        & > button:hover {
-          transition: background 300ms ease 0s;
-          background: var(--grey-20);
+          background-color: transparent;
+          border: 1px solid var(--grey-20);
+
+          padding: 0 4px;
         }
 
         & > span {

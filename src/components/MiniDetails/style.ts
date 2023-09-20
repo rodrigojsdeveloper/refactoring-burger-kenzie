@@ -18,7 +18,7 @@ const Container = styled.div`
     width: 60px;
     height: 60px;
 
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     background-color: var(--color-primary-100);
   }
 
