@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100%;
-  max-width: 300px;
+  max-width: 280px;
   height: 346px;
 
   background-color: var(--white);

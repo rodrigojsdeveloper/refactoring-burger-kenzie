@@ -46,6 +46,7 @@ export interface IProductContextData {
   handleRemoveFromCart: (product: IProduct) => void;
   handleClickCartProduct: (product: IProduct) => void;
   handleClearCart: () => void;
+  loading: boolean;
 }
 
 export interface IProductContextProvider {

@@ -33,7 +33,7 @@ export default createGlobalStyle`
     --information: #155BCB;
 
     // Border Radius
-    --border-radius: 2px
+    --border-radius: 4px
 	}
 
 	body {

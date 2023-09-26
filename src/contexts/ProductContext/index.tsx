@@ -19,7 +19,11 @@ export const ProductContextProvider = ({
 
   const [filteredProducts, setFilteredProducts] = useState<IProduct[]>([]);
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
+    setLoading(true);
+
     api
       .get("products", {
         headers: {
@@ -27,7 +31,8 @@ export const ProductContextProvider = ({
         },
       })
       .then((res) => setProducts(res.data))
-      .catch((error) => console.error(error));
+      .catch((error) => console.error(error))
+      .finally(() => setLoading(false));
   }, [token]);
 
   const handleAddToCart = (product: IProduct) => {
@@ -82,6 +87,7 @@ export const ProductContextProvider = ({
         handleRemoveFromCart,
         handleClickCartProduct,
         handleClearCart,
+        loading,
       }}
     >
       {children}
