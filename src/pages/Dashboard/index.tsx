@@ -2,7 +2,6 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Header } from "../../components/Header";
 import { useNavigate } from "react-router-dom";
 import { List } from "../../components/List";
-import { Cart } from "../../components/Cart";
 import React, { useEffect } from "react";
 import { Container } from "./style";
 
@@ -27,7 +26,6 @@ const Dashboard = () => {
         <div>
           <div>
             <List />
-            <Cart />
           </div>
         </div>
       </Container>

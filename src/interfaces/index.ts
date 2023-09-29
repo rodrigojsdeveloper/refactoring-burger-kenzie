@@ -55,3 +55,11 @@ export interface IProductContextData {
 export interface IProductContextProvider {
   children: React.ReactNode;
 }
+
+export interface IChildren {
+  children: React.ReactNode;
+}
+
+export interface IModalCart {
+  setModal: React.Dispatch<React.SetStateAction<boolean>>;
+}

@@ -34,6 +34,9 @@ export default createGlobalStyle`
     --sucess: #168821;
     --information: #155BCB;
 
+    // Shadow
+    --shadow: #00000040;
+
     // Border Radius
     --border-radius: 0px;
 	}

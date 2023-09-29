@@ -1,46 +1,5 @@
 import styled from "styled-components";
 
-const Input = styled.input`
-  width: 100%;
-  height: 100%;
-
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-
-  background-color: var(--white);
-
-  &::placeholder {
-    color: var(--grey-20);
-  }
-
-  &:focus {
-    & ~ div {
-      border-color: var(--color-black);
-    }
-  }
-`;
-
-const SearchContainer = styled.div`
-  width: 100%;
-  max-width: 365px;
-  height: 60px;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  background-color: var(--white);
-  border: 2px solid var(--grey-20);
-  border-radius: var(--border-radius);
-
-  padding: 10px 10px 10px 15px;
-
-  &:focus-within {
-    border-color: var(--color-black);
-  }
-`;
-
 const Container = styled.header`
   width: 100%;
 
@@ -68,9 +27,8 @@ const Container = styled.header`
       height: 36.83px;
     }
 
-    & > div {
-      ${SearchContainer};
-      ${Input};
+    & > svg {
+      cursor: pointer;
     }
   }
 
@@ -85,4 +43,4 @@ const Container = styled.header`
   }
 `;
 
-export { Container, Input, SearchContainer };
+export { Container };
