@@ -12,26 +12,29 @@ import * as yup from "yup";
 const FormSignUp = () => {
   const navigate = useNavigate();
 
-  const [load, setLoad] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const schema = yup.object().shape({
-    name: yup.string().required(""),
-    email: yup.string().required(""),
-    password: yup.string().required(""),
+    name: yup.string().required("Nome obrigatório"),
+    email: yup.string().required("Email obrigatório").email("Email inválido"),
+    password: yup.string().required("Senha obrigatória"),
   });
 
-  const { register, handleSubmit } = useForm({
+  const { register, handleSubmit, reset } = useForm({
     resolver: yupResolver(schema),
   });
 
   const onSubmitFunction = (data: any) => {
-    setLoad(true);
+    setIsLoading(true);
 
     api
       .post("users", data)
-      .then(() => navigate("/"))
-      .catch((error) => console.error(error))
-      .finally(() => setLoad(false));
+      .then(() => {
+        reset();
+        navigate("/");
+      })
+      .catch((error) => console.error("error", error))
+      .finally(() => setIsLoading(false));
   };
 
   return (
@@ -43,7 +46,7 @@ const FormSignUp = () => {
       </div>
 
       <div>
-        <CustomInput label="Name" type="text" register={register} name="name" />
+        <CustomInput label="Nome" type="text" register={register} name="name" />
         <CustomInput
           label="Email"
           type="email"
@@ -57,8 +60,8 @@ const FormSignUp = () => {
           name="password"
         />
 
-        <Button size="large" color="grey" type="submit" disabled={load}>
-          {load ? "Cadastrando..." : "Cadastrar"}
+        <Button type="submit" size="large" color="grey" disabled={isLoading}>
+          {isLoading ? "Cadastrando..." : "Cadastrar"}
         </Button>
       </div>
     </Container>

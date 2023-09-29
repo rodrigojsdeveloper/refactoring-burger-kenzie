@@ -43,6 +43,7 @@ export default createGlobalStyle`
 	
   button, a {
 		cursor: pointer;
+    transition: 0.5s;
 	}
 	
   a {

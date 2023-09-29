@@ -9,7 +9,7 @@ import { Container } from "./style";
 const Dashboard = () => {
   const navigate = useNavigate();
 
-  const token = sessionStorage.getItem("Burger Kenzie: token");
+  const token = localStorage.getItem("Burger Kenzie: token");
 
   useEffect(() => {
     if (!token) {

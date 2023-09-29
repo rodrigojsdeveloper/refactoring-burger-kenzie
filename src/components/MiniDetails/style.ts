@@ -13,6 +13,7 @@ const Container = styled.div`
   align-items: center;
 
   border: 1.5px solid var(--grey-20);
+  border-radius: var(--border-radius);
 
   & > figure {
     width: 60px;

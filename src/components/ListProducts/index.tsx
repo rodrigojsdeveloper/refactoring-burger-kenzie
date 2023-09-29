@@ -1,12 +1,21 @@
 import { ProductContext } from "../../contexts/ProductContext";
+import { useContext, useEffect, useState } from "react";
 import { IProduct } from "../../interfaces";
 import { Product } from "../Product";
 import { Loading } from "../Loading";
 import { Container } from "./style";
-import { useContext } from "react";
 
 const ListProducts = () => {
-  const { products, filteredProducts, loading } = useContext(ProductContext);
+  const token = localStorage.getItem("Burger Kenzie: token");
+
+  const { products, filteredProducts, fecthProducts } =
+    useContext(ProductContext);
+
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    fecthProducts(setLoading, token);
+  }, []);
 
   return (
     <Container>

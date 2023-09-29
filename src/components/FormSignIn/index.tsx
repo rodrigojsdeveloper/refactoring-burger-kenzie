@@ -11,29 +11,30 @@ import * as yup from "yup";
 const FormSignIn = () => {
   const navigate = useNavigate();
 
-  const [load, setLoad] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const schema = yup.object().shape({
-    email: yup.string().required(""),
-    password: yup.string().required(""),
+    email: yup.string().required("Email obrigatório"),
+    password: yup.string().required("Senha obrigatória"),
   });
 
-  const { register, handleSubmit } = useForm({
+  const { register, handleSubmit, reset } = useForm({
     resolver: yupResolver(schema),
   });
 
   const onSubmitFunction = (data: any) => {
-    setLoad(true);
+    setIsLoading(true);
 
     api
       .post("login", data)
       .then((res) => {
-        sessionStorage.setItem("Burger Kenzie: token", res.data.accessToken);
+        localStorage.setItem("Burger Kenzie: token", res.data.accessToken);
 
+        reset();
         navigate("/dashboard");
       })
-      .catch((error) => console.error(error))
-      .finally(() => setLoad(false));
+      .catch((error) => console.error("error", error))
+      .finally(() => setIsLoading(false));
   };
 
   return (
@@ -57,8 +58,8 @@ const FormSignIn = () => {
         </div>
 
         <div className="divButtons">
-          <Button color="green" size="large" type="submit" disabled={load}>
-            {load ? "Entrando..." : "Entrar"}
+          <Button type="submit" color="green" size="large" disabled={isLoading}>
+            {isLoading ? "Entrando..." : "Entrar"}
           </Button>
           <p>Crie sua conta para saborear muitas delícias e matar sua fome!</p>
           <Button color="grey" size="large" onClick={() => navigate("/signup")}>

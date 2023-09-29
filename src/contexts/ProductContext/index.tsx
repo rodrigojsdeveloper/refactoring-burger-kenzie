@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { api } from "../../services/api";
 import {
   IProduct,
@@ -11,17 +11,16 @@ export const ProductContext = createContext({} as IProductContextData);
 export const ProductContextProvider = ({
   children,
 }: IProductContextProvider) => {
-  const token = sessionStorage.getItem("Burger Kenzie: token");
-
   const [products, setProducts] = useState<IProduct[]>([]);
 
   const [cartProducts, setCartProducts] = useState<IProduct[]>([]);
 
   const [filteredProducts, setFilteredProducts] = useState<IProduct[]>([]);
 
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
+  const fecthProducts = (
+    setLoading: React.Dispatch<React.SetStateAction<boolean>>,
+    token: string | null
+  ) => {
     setLoading(true);
 
     api
@@ -33,7 +32,7 @@ export const ProductContextProvider = ({
       .then((res) => setProducts(res.data))
       .catch((error) => console.error(error))
       .finally(() => setLoading(false));
-  }, [token]);
+  };
 
   const handleAddToCart = (product: IProduct) => {
     const findProduct = cartProducts.find((p) => p.id === product.id);
@@ -83,11 +82,11 @@ export const ProductContextProvider = ({
         setCartProducts,
         filteredProducts,
         setFilteredProducts,
+        fecthProducts,
         handleAddToCart,
         handleRemoveFromCart,
         handleClickCartProduct,
         handleClearCart,
-        loading,
       }}
     >
       {children}

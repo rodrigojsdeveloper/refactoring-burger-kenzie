@@ -42,11 +42,14 @@ export interface IProductContextData {
   setCartProducts: React.Dispatch<React.SetStateAction<IProduct[]>>;
   filteredProducts: IProduct[];
   setFilteredProducts: React.Dispatch<React.SetStateAction<IProduct[]>>;
+  fecthProducts: (
+    setLoading: React.Dispatch<React.SetStateAction<boolean>>,
+    token: string | null
+  ) => void;
   handleAddToCart: (product: IProduct) => void;
   handleRemoveFromCart: (product: IProduct) => void;
   handleClickCartProduct: (product: IProduct) => void;
   handleClearCart: () => void;
-  loading: boolean;
 }
 
 export interface IProductContextProvider {

@@ -5,7 +5,7 @@ import { Container } from "./style";
 import React from "react";
 
 const NotFound = () => {
-  const token = sessionStorage.getItem("Burger Kenzie: token");
+  const token = localStorage.getItem("Burger Kenzie: token");
 
   const currentUrl = window.location.href.split("/")[3];
 

@@ -13,7 +13,6 @@ const Container = styled.button<IButtonStyle>`
   justify-content: center;
   align-items: center;
 
-  transition: 0.5s;
   border-radius: var(--border-radius);
 
   :disabled {
