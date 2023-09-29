@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const Container = styled.main`
-  & > .div-container {
+const Container = styled.div`
+  & > main {
     width: 100%;
 
     display: flex;

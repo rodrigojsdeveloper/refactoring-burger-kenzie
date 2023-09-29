@@ -23,11 +23,11 @@ const Dashboard = () => {
       </HelmetProvider>
       <Container>
         <Header />
-        <div className="div-container">
+        <main>
           <div className="div-content">
             <List />
           </div>
-        </div>
+        </main>
       </Container>
     </React.Fragment>
   );
