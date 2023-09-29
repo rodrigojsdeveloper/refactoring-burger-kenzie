@@ -103,7 +103,7 @@ const Container = styled.div`
           width: 20px;
           height: 20px;
 
-          background-color: transparent;
+          background-color: var(--transparent);
           border: 1px solid var(--grey-5);
 
           padding: 0 4px 1px;

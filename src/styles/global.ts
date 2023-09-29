@@ -30,6 +30,9 @@ export default createGlobalStyle`
     // Shadow
     --shadow: #00000040;
 
+    // Transparent
+    --transparent: transparent;
+    
     // Border Radius
     --border-radius: 0px;
 	}
