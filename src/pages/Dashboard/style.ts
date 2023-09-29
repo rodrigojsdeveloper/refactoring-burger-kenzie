@@ -20,14 +20,6 @@ const Container = styled.main`
       justify-content: space-between;
       align-items: flex-start;
     }
-
-    @media (max-width: 1300px) {
-      padding: 15px 18.09px 42px 16px;
-
-      & > div {
-        flex-direction: column;
-      }
-    }
   }
 `;
 

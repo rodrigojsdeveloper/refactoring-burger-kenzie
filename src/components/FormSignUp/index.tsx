@@ -39,13 +39,13 @@ const FormSignUp = () => {
 
   return (
     <Container onSubmit={handleSubmit(onSubmitFunction)}>
-      <div>
+      <div className="div-container">
         <h2>Cadastro</h2>
 
         <Link to="/">Retornar para login</Link>
       </div>
 
-      <div>
+      <div className="div-content">
         <CustomInput label="Nome" type="text" register={register} name="name" />
         <CustomInput
           label="Email"

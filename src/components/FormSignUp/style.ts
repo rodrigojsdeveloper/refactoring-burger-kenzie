@@ -15,7 +15,7 @@ const Container = styled.form`
   border: 1.5px solid var(--grey-20);
   border-radius: var(--border-radius);
 
-  & > div:nth-child(1) {
+  & > .div-container {
     width: 100%;
 
     display: flex;
@@ -36,14 +36,14 @@ const Container = styled.form`
     }
   }
 
-  & > div:nth-child(2) {
+  & > .div-content {
     width: 100%;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 375px) {
     height: 425px;
 
-    & > div:nth-child(1) {
+    & > .div-container {
       height: 50px;
 
       flex-direction: column;

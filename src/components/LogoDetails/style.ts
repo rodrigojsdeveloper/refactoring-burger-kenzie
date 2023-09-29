@@ -14,11 +14,11 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
 
-    & > img:nth-child(1) {
+    & > img {
       padding-bottom: 20px;
     }
 
-    & > img:nth-child(3) {
+    & > svg {
       display: none;
     }
   }

@@ -40,20 +40,18 @@ const Container = styled.div`
       justify-content: space-between;
 
       & > h3 {
+        width: 100%;
+        max-width: 150px;
+        height: 25px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
         font-weight: 700;
         font-size: 17px;
-
-        @media (max-width: 1300px) {
-          width: 100%;
-          max-width: 150px;
-          height: 25px;
-
-          display: -webkit-box;
-          -webkit-line-clamp: 1;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
       }
 
       & > p {

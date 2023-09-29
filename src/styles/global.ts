@@ -31,7 +31,7 @@ export default createGlobalStyle`
     --shadow: #00000040;
 
     // Border Radius
-    --border-radius: 5px;
+    --border-radius: 0px;
 	}
 
 	body {

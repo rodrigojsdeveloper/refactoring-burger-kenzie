@@ -28,17 +28,18 @@ const Container = styled.div`
 
     font-size: 14px;
     font-weight: 400;
-    line-height: 25px;
+    line-height: 20px;
 
     width: 100%;
     max-width: 348px;
+  }
 
-    @media (max-width: 425px) {
-      line-height: 20px;
-    }
+  @media (max-width: 425px) {
+    height: auto;
+    flex-direction: column;
 
-    @media (max-width: 375px) {
-      font-size: 12px;
+    & > figure {
+      margin-bottom: 10px;
     }
   }
 `;
