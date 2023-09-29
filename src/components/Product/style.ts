@@ -4,8 +4,8 @@ const Container = styled.div`
   width: 100%;
   max-width: 280px;
 
-  background-color: var(--white);
-  border: 2px solid var(--grey-20);
+  background-color: var(--color-white);
+  border: 2px solid var(--grey-5);
   border-radius: var(--border-radius);
 
   transition: 0.5s;
@@ -28,7 +28,7 @@ const Container = styled.div`
     width: 100%;
     height: 150px;
 
-    background-color: var(--grey-0);
+    background-color: var(--grey-6);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 
     display: flex;
@@ -61,7 +61,7 @@ const Container = styled.div`
       font-size: 12px;
       line-height: 16px;
 
-      color: var(--grey-50);
+      color: var(--grey-2);
 
       padding-top: 14px;
     }

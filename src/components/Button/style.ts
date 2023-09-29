@@ -8,7 +8,7 @@ const Container = styled.button<IButtonStyle>`
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
-  color: var(--white);
+  color: var(--color-white);
 
   display: flex;
   flex-direction: row;
@@ -52,18 +52,18 @@ const Container = styled.button<IButtonStyle>`
 
       case "grey":
         return css`
-          color: var(--grey-50);
-          border: 1px solid var(--grey-20);
-          background-color: var(--grey-20);
+          color: var(--grey-2);
+          border: 1px solid var(--grey-5);
+          background-color: var(--grey-5);
 
           &:hover {
-            border-color: var(--grey-5);
-            background-color: var(--grey-5);
+            border-color: var(--grey-4);
+            background-color: var(--grey-4);
           }
 
           &:active {
-            border-color: var(--grey-10);
-            background-color: var(--grey-10);
+            border-color: var(--grey-3);
+            background-color: var(--grey-3);
           }
         `;
 
@@ -72,8 +72,8 @@ const Container = styled.button<IButtonStyle>`
           font-size: 14px;
           line-height: 16.94px;
 
-          border-color: var(--grey-10);
-          background-color: var(--grey-10);
+          border-color: var(--grey-3);
+          background-color: var(--grey-3);
         `;
 
       default:

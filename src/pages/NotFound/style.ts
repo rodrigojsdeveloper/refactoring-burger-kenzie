@@ -25,7 +25,7 @@ const Container = styled.main`
         padding: 30px 0;
       }
       & > p:nth-last-child(1) {
-        color: var(--grey-10);
+        color: var(--grey-3);
         padding-top: 8px;
       }
     }

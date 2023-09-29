@@ -12,7 +12,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  border: 1.5px solid var(--grey-20);
+  border: 1.5px solid var(--grey-5);
   border-radius: var(--border-radius);
 
   & > figure {

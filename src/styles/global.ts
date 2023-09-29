@@ -19,13 +19,13 @@ export default createGlobalStyle`
     --color-primary-100: #F6FFFA;
 
     // Grey Scale Palette
-    --gray-100: #333333;
-    --grey-50: #828282;
-    --grey-20: #E0E0E0;
-    --grey-10: #BDBDBD;
-    --grey-5: #d2cece;
-    --grey-0: #F5F5F5;
-    --white: #FFFFFF;
+    --grey-1: #333333;
+    --grey-2: #828282;
+    --grey-3: #BDBDBD;
+    --grey-4: #D2CECE;
+    --grey-5: #E0E0E0;
+    --grey-6: #F5F5F5;
+    --color-white: #FFFFFF;
 
     // Shadow
     --shadow: #00000040;
@@ -35,8 +35,8 @@ export default createGlobalStyle`
 	}
 
 	body {
-    color: var(--gray-100);
-    background-color: var(--white);
+    color: var(--grey-1);
+    background-color: var(--color-white);
 	}
 	
   button, a {
@@ -53,11 +53,11 @@ export default createGlobalStyle`
 	}
 
 	::-webkit-scrollbar-track {
-		background-color: var(--white);
+		background-color: var(--color-white);
 	}
 
 	::-webkit-scrollbar-thumb {
 		border-radius: 0.5px;
-		background-color: var(--grey-20);
+		background-color: var(--grey-5);
 	}
 `;

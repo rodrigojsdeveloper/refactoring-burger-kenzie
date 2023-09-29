@@ -15,6 +15,7 @@ const CustomInput = ({ label, type, register, name }: InputProps) => {
         type={type}
         {...register(name)}
         autoComplete="off"
+        required={true}
         onChange={handleInputChange}
         className={hasValue ? "has-value" : ""}
       />

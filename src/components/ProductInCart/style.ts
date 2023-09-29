@@ -13,7 +13,7 @@ const Container = styled.div`
     width: 80px;
     height: 80px;
 
-    background-color: var(--grey-20);
+    background-color: var(--grey-5);
     border-radius: var(--border-radius);
 
     display: flex;
@@ -77,11 +77,11 @@ const Container = styled.div`
         line-height: 15px;
 
         cursor: pointer;
-        color: var(--grey-10);
+        color: var(--grey-3);
         transition: 0.5s;
 
         &:hover {
-          color: var(--grey-50);
+          color: var(--grey-2);
         }
       }
 
@@ -96,7 +96,7 @@ const Container = styled.div`
           font-size: 14px;
           line-height: 18px;
 
-          color: var(--grey-50);
+          color: var(--grey-2);
         }
 
         & > button {
@@ -104,7 +104,7 @@ const Container = styled.div`
           height: 20px;
 
           background-color: transparent;
-          border: 1px solid var(--grey-20);
+          border: 1px solid var(--grey-5);
 
           padding: 0 4px 1px;
         }
@@ -115,8 +115,8 @@ const Container = styled.div`
 
           padding: 0.5px 8px 1.5px;
 
-          border-top: 1px solid var(--grey-20);
-          border-bottom: 1px solid var(--grey-20);
+          border-top: 1px solid var(--grey-5);
+          border-bottom: 1px solid var(--grey-5);
         }
       }
     }

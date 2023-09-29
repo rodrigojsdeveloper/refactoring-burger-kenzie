@@ -4,7 +4,7 @@ const Container = styled.div`
   width: 100%;
   height: 465px;
 
-  background-color: var(--grey-0);
+  background-color: var(--grey-6);
   border-radius: 0px 0px var(--border-radius) var(--border-radius);
 
   & > menu {
@@ -15,7 +15,7 @@ const Container = styled.div`
     overflow-y: scroll;
 
     &::-webkit-scrollbar-track {
-      background-color: var(--grey-0) !important;
+      background-color: var(--grey-6) !important;
     }
   }
 
@@ -24,7 +24,7 @@ const Container = styled.div`
     height: 140px;
 
     padding: 0 10px 20px;
-    border-top: 2px solid var(--grey-20);
+    border-top: 2px solid var(--grey-5);
 
     & > div {
       width: 100%;
@@ -44,7 +44,7 @@ const Container = styled.div`
       }
 
       & > span {
-        color: var(--grey-50);
+        color: var(--grey-2);
       }
     }
   }

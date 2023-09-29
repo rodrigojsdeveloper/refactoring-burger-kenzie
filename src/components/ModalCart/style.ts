@@ -26,7 +26,7 @@ const Container = styled.div`
       font-size: 18px;
       line-height: 28px;
 
-      color: var(--white);
+      color: var(--color-white);
     }
 
     & > svg {

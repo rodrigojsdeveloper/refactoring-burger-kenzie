@@ -11,7 +11,7 @@ const Container = styled.div`
 
   padding: 10px;
 
-  background-color: var(--grey-0);
+  background-color: var(--grey-6);
   border-radius: 0px 0px var(--border-radius) var(--border-radius);
 
   & > b {
@@ -27,7 +27,7 @@ const Container = styled.div`
     font-size: 14px;
     line-height: 24px;
 
-    color: var(--grey-50);
+    color: var(--grey-2);
   }
 `;
 

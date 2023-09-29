@@ -11,7 +11,7 @@ const Container = styled.header`
 
   padding: 20px 118px;
 
-  background-color: var(--grey-0);
+  background-color: var(--grey-6);
 
   & > div {
     width: 100%;
@@ -49,7 +49,7 @@ const Container = styled.header`
 
         font-weight: 900;
         font-size: 14px;
-        color: var(--white);
+        color: var(--color-white);
 
         border-radius: 7px;
         background-color: var(--color-primary);

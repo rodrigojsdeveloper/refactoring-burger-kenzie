@@ -12,7 +12,7 @@ const Container = styled.form`
   justify-content: space-between;
   align-items: flex-start;
 
-  border: 1.5px solid var(--grey-20);
+  border: 1.5px solid var(--grey-5);
   border-radius: var(--border-radius);
 
   & > .div-container {
@@ -28,7 +28,7 @@ const Container = styled.form`
       font-weight: 500;
       white-space: nowrap;
 
-      color: var(--grey-50);
+      color: var(--grey-2);
 
       &:hover {
         text-decoration: underline;

@@ -22,7 +22,7 @@ const Input = styled.input`
   font-size: 14px;
   line-height: 18px;
 
-  border: 1px solid var(--grey-20);
+  border: 1px solid var(--grey-5);
   border-radius: var(--border-radius);
 
   padding: 12px;
@@ -35,7 +35,7 @@ const Input = styled.input`
 
   &:placeholder-shown + label {
     transform: translate(0, 0) scale(1);
-    color: var(--grey-50);
+    color: var(--grey-2);
   }
 `;
 
@@ -48,8 +48,8 @@ const Label = styled.label`
   font-size: 16px;
   line-height: 18px;
 
-  color: var(--grey-50);
-  background-color: var(--white);
+  color: var(--grey-2);
+  background-color: var(--color-white);
 
   padding: 0 5px;
   pointer-events: none;
@@ -58,7 +58,7 @@ const Label = styled.label`
 
   &.has-value {
     transform: translate(-0.5rem, -1.7rem) scale(0.8);
-    color: var(--grey-50);
+    color: var(--grey-2);
   }
 `;
 
