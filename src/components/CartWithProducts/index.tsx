@@ -1,4 +1,4 @@
-import { ProductContext } from "../../contexts/ProductContext";
+import { ProductContext } from "../../contexts/product.context";
 import { ProductInCart } from "../ProductInCart";
 import { Container } from "./style";
 import { Button } from "../Button";

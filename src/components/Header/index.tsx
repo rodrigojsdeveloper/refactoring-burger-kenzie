@@ -1,4 +1,4 @@
-import { ProductContext } from "../../contexts/ProductContext";
+import { ProductContext } from "../../contexts/product.context";
 import logo from "../../assets/LogoKenzieBurguer.svg";
 import { ModalBackground } from "../ModalBackground";
 import { useContext, useState } from "react";

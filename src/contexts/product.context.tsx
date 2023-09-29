@@ -1,21 +1,15 @@
+import { IProductProps, IProductContextData, IChildren } from "../interfaces";
 import { createContext, useState } from "react";
-import { api } from "../../services/api";
-import {
-  IProduct,
-  IProductContextData,
-  IProductContextProvider,
-} from "../../interfaces";
+import { api } from "../services/api";
 
 export const ProductContext = createContext({} as IProductContextData);
 
-export const ProductContextProvider = ({
-  children,
-}: IProductContextProvider) => {
-  const [products, setProducts] = useState<IProduct[]>([]);
+export const ProductContextProvider = ({ children }: IChildren) => {
+  const [products, setProducts] = useState<IProductProps[]>([]);
 
-  const [cartProducts, setCartProducts] = useState<IProduct[]>([]);
+  const [cartProducts, setCartProducts] = useState<IProductProps[]>([]);
 
-  const [filteredProducts, setFilteredProducts] = useState<IProduct[]>([]);
+  const [filteredProducts, setFilteredProducts] = useState<IProductProps[]>([]);
 
   const fecthProducts = (
     setLoading: React.Dispatch<React.SetStateAction<boolean>>,
@@ -34,7 +28,7 @@ export const ProductContextProvider = ({
       .finally(() => setLoading(false));
   };
 
-  const handleAddToCart = (product: IProduct) => {
+  const handleAddToCart = (product: IProductProps) => {
     const findProduct = cartProducts.find((p) => p.id === product.id);
 
     if (!findProduct) {
@@ -52,7 +46,7 @@ export const ProductContextProvider = ({
     }
   };
 
-  const handleRemoveFromCart = (product: IProduct) => {
+  const handleRemoveFromCart = (product: IProductProps) => {
     if (product.count > 1) {
       const indexProduct = cartProducts.indexOf(product);
 
@@ -68,7 +62,7 @@ export const ProductContextProvider = ({
     }
   };
 
-  const handleClickCartProduct = (product: IProduct) =>
+  const handleClickCartProduct = (product: IProductProps) =>
     setCartProducts(cartProducts.filter((p) => p.id !== product.id));
 
   const handleClearCart = () => setCartProducts([]);

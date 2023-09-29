@@ -1,6 +1,5 @@
-import { ProductContext } from "../../contexts/ProductContext";
+import { ProductContext } from "../../contexts/product.context";
 import { useContext, useEffect, useState } from "react";
-import { IProduct } from "../../interfaces";
 import { Product } from "../Product";
 import { Loading } from "../Loading";
 import { Container } from "./style";
@@ -22,11 +21,11 @@ const List = () => {
       {loading ? (
         <Loading />
       ) : filteredProducts.length > 0 ? (
-        filteredProducts.map((product: IProduct) => (
+        filteredProducts.map((product) => (
           <Product product={product} key={product.id} />
         ))
       ) : (
-        products.map((product: IProduct) => (
+        products.map((product) => (
           <Product product={product} key={product.id} />
         ))
       )}

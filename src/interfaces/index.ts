@@ -1,6 +1,6 @@
 import { FieldValues, UseFormRegister } from "react-hook-form";
 
-export interface IButton {
+export interface IButtonProps {
   children: React.ReactNode;
   color: "green" | "grey" | "grey-green";
   size?: "106px";
@@ -21,7 +21,7 @@ export interface InputProps {
   name: string;
 }
 
-export interface IProduct {
+export interface IProductProps {
   id: string;
   img: string;
   name: string;
@@ -31,29 +31,25 @@ export interface IProduct {
   count: number;
 }
 
-export interface IProductComponent {
-  product: IProduct;
+export interface IProduct {
+  product: IProductProps;
 }
 
 export interface IProductContextData {
-  products: IProduct[];
-  setProducts: React.Dispatch<React.SetStateAction<IProduct[]>>;
-  cartProducts: IProduct[];
-  setCartProducts: React.Dispatch<React.SetStateAction<IProduct[]>>;
-  filteredProducts: IProduct[];
-  setFilteredProducts: React.Dispatch<React.SetStateAction<IProduct[]>>;
+  products: IProductProps[];
+  setProducts: React.Dispatch<React.SetStateAction<IProductProps[]>>;
+  cartProducts: IProductProps[];
+  setCartProducts: React.Dispatch<React.SetStateAction<IProductProps[]>>;
+  filteredProducts: IProductProps[];
+  setFilteredProducts: React.Dispatch<React.SetStateAction<IProductProps[]>>;
   fecthProducts: (
     setLoading: React.Dispatch<React.SetStateAction<boolean>>,
     token: string | null
   ) => void;
-  handleAddToCart: (product: IProduct) => void;
-  handleRemoveFromCart: (product: IProduct) => void;
-  handleClickCartProduct: (product: IProduct) => void;
+  handleAddToCart: (product: IProductProps) => void;
+  handleRemoveFromCart: (product: IProductProps) => void;
+  handleClickCartProduct: (product: IProductProps) => void;
   handleClearCart: () => void;
-}
-
-export interface IProductContextProvider {
-  children: React.ReactNode;
 }
 
 export interface IChildren {

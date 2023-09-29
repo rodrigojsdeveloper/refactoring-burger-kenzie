@@ -1,10 +1,10 @@
-import { ProductContext } from "../../contexts/ProductContext";
-import { IProductComponent } from "../../interfaces";
+import { ProductContext } from "../../contexts/product.context";
+import { IProduct } from "../../interfaces";
 import { Container } from "./style";
 import { Button } from "../Button";
 import { useContext } from "react";
 
-const Product = ({ product }: IProductComponent) => {
+const Product = ({ product }: IProduct) => {
   const { handleAddToCart } = useContext(ProductContext);
 
   return (

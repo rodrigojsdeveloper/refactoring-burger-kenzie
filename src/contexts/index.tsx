@@ -1,7 +1,7 @@
-import { ProductContextProvider } from "./ProductContext";
-import { IProductContextProvider } from "../interfaces";
+import { ProductContextProvider } from "./product.context";
+import { IChildren } from "../interfaces";
 
-const Providers = ({ children }: IProductContextProvider) => {
+const Providers = ({ children }: IChildren) => {
   return <ProductContextProvider>{children}</ProductContextProvider>;
 };
 
