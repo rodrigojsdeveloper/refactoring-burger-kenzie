@@ -9,6 +9,17 @@ const Container = styled.div`
   border: 2px solid var(--grey-20);
   border-radius: var(--border-radius);
 
+  transition: 0.5s;
+
+  &:hover {
+    border-color: var(--color-primary);
+
+    button {
+      border-color: var(--color-primary);
+      background-color: var(--color-primary);
+    }
+  }
+
   & > figure {
     width: 100%;
     height: 150px;

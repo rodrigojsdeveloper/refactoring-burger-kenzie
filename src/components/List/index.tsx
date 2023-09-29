@@ -5,7 +5,7 @@ import { Product } from "../Product";
 import { Loading } from "../Loading";
 import { Container } from "./style";
 
-const ListProducts = () => {
+const List = () => {
   const token = localStorage.getItem("Burger Kenzie: token");
 
   const { products, filteredProducts, fecthProducts } =
@@ -34,4 +34,4 @@ const ListProducts = () => {
   );
 };
 
-export { ListProducts };
+export { List };

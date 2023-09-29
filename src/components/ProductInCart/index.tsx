@@ -13,16 +13,16 @@ const ProductInCart = ({ product }: IProductComponent) => {
         <img src={product.img} alt={product.name} />
       </figure>
 
-      <div>
-        <div>
+      <div className="product-info">
+        <div className="product-details">
           <h3>{product.name}</h3>
           <p>{product.category}</p>
         </div>
 
-        <div>
+        <div className="product-actions">
           <p onClick={() => handleClickCartProduct(product)}>Remover</p>
 
-          <div>
+          <div className="product-quantity">
             <button
               className="botaoMais"
               onClick={() => handleAddToCart(product)}

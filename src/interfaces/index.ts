@@ -2,7 +2,7 @@ import { FieldValues, UseFormRegister } from "react-hook-form";
 
 export interface IButton {
   children: React.ReactNode;
-  color: "green" | "grey";
+  color: "green" | "grey" | "grey-green";
   size: "default" | "large" | "medium";
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   type?: "button" | "submit" | "reset";
@@ -10,7 +10,7 @@ export interface IButton {
 }
 
 export interface IButtonStyle {
-  color: "green" | "grey";
+  color: "green" | "grey" | "grey-green";
   size: "default" | "large" | "medium";
 }
 

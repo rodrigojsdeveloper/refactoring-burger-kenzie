@@ -22,7 +22,7 @@ const Product = ({ product }: IProductComponent) => {
 
         <Button
           size="medium"
-          color="green"
+          color="grey-green"
           onClick={() => handleAddToCart(product)}
         >
           Adicionar

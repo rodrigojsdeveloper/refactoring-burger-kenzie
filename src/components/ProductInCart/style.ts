@@ -21,7 +21,7 @@ const Container = styled.div`
     justify-content: center;
   }
 
-  & > div {
+  & > .product-info {
     width: 100%;
     max-width: 253px;
 
@@ -32,7 +32,7 @@ const Container = styled.div`
 
     padding-left: 10px;
 
-    & > div:nth-child(1) {
+    & > .product-details {
       display: flex;
       flex-direction: column;
 
@@ -65,7 +65,7 @@ const Container = styled.div`
       }
     }
 
-    & > div:nth-child(2) {
+    & > .product-actions {
       height: 45px;
 
       display: flex;
@@ -80,16 +80,23 @@ const Container = styled.div`
 
         cursor: pointer;
         color: var(--grey-10);
+        transition: 0.5s;
 
         &:hover {
           color: var(--grey-50);
-          text-decoration: underline;
         }
       }
 
-      & > div {
+      & > .product-quantity {
+        width: 100%;
+        max-width: 70px;
+
         button,
         span {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+
           color: var(--grey-50);
         }
 
@@ -100,17 +107,14 @@ const Container = styled.div`
           background-color: transparent;
           border: 1px solid var(--grey-20);
 
-          padding: 0 4px;
+          padding: 0 4px 1px;
         }
 
         & > span {
           width: 20px;
           height: 20px;
 
-          padding: 0.5px 12px 2px 12px;
-
-          font-size: 14px;
-          font-weight: 500;
+          padding: 0.5px 5px 1px;
 
           border-top: 1px solid var(--grey-20);
           border-bottom: 1px solid var(--grey-20);

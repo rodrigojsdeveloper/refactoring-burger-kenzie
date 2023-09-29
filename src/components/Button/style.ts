@@ -7,6 +7,7 @@ const Container = styled.button<IButtonStyle>`
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
+  color: var(--white);
 
   display: flex;
   flex-direction: row;
@@ -46,25 +47,45 @@ const Container = styled.button<IButtonStyle>`
     switch (color) {
       case "green":
         return css`
+          border: 1px solid var(--color-primary);
           background-color: var(--color-primary);
-          border-color: var(--color-primary);
-          color: var(--white);
 
-          :hover {
-            background-color: var(--color-primary-50);
+          &:hover {
             border-color: var(--color-primary-50);
+            background-color: var(--color-primary-50);
+          }
+
+          &:active {
+            border-color: var(--color-primary-75);
+            background-color: var(--color-primary-75);
           }
         `;
 
       case "grey":
         return css`
-          background-color: var(--grey-20);
-          border-color: var(--grey-20);
           color: var(--grey-50);
+          border: 1px solid var(--grey-20);
+          background-color: var(--grey-20);
+
+          &:hover {
+            border-color: var(--grey-5);
+            background-color: var(--grey-5);
+          }
+
+          &:active {
+            border-color: var(--grey-10);
+            background-color: var(--grey-10);
+          }
+        `;
+
+      case "grey-green":
+        return css`
+          border-color: var(--grey-10);
+          background-color: var(--grey-10);
 
           :hover {
-            background-color: var(--grey-10);
-            border-color: var(--grey-10);
+            border-color: var(--color-primary);
+            background-color: var(--color-primary);
           }
         `;
 
