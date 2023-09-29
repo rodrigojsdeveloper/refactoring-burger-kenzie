@@ -16,7 +16,7 @@ const ProductInCart = ({ product }: IProductComponent) => {
       <div className="product-info">
         <div className="product-details">
           <h3>{product.name}</h3>
-          <p>{product.category}</p>
+          <p>R$ {product.price.toFixed(2).replace(".", ",")}</p>
         </div>
 
         <div className="product-actions">

@@ -23,7 +23,7 @@ const Container = styled.div`
     width: 100%;
     height: 140px;
 
-    padding: 0 10px 20px 10px;
+    padding: 0 10px 20px;
     border-top: 2px solid var(--grey-20);
 
     & > div {

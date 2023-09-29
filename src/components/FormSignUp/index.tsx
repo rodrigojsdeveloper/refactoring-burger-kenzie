@@ -60,7 +60,7 @@ const FormSignUp = () => {
           name="password"
         />
 
-        <Button type="submit" size="large" color="grey" disabled={isLoading}>
+        <Button type="submit" color="grey" disabled={isLoading}>
           {isLoading ? "Cadastrando..." : "Cadastrar"}
         </Button>
       </div>

@@ -17,6 +17,11 @@ const Container = styled.div`
     button {
       border-color: var(--color-primary);
       background-color: var(--color-primary);
+
+      &:active {
+        border-color: var(--color-primary-75);
+        background-color: var(--color-primary-75);
+      }
     }
   }
 

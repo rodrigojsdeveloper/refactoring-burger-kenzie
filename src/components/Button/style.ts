@@ -3,6 +3,7 @@ import { IButtonStyle } from "../../interfaces";
 
 const Container = styled.button<IButtonStyle>`
   width: 100%;
+  height: 60px;
 
   font-weight: 600;
   font-size: 16px;
@@ -23,19 +24,7 @@ const Container = styled.button<IButtonStyle>`
 
   ${({ size }) => {
     switch (size) {
-      case "default":
-        return css`
-          max-width: 343px;
-          height: 60px;
-        `;
-
-      case "large":
-        return css`
-          max-width: 421px;
-          height: 60px;
-        `;
-
-      case "medium":
+      case "106px":
         return css`
           max-width: 106px;
           height: 40px;
@@ -82,11 +71,6 @@ const Container = styled.button<IButtonStyle>`
         return css`
           border-color: var(--grey-10);
           background-color: var(--grey-10);
-
-          :hover {
-            border-color: var(--color-primary);
-            background-color: var(--color-primary);
-          }
         `;
 
       default:

@@ -5,7 +5,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  padding: 20px;
+  padding: 10px;
 
   position: fixed;
   z-index: 2000;

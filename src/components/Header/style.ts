@@ -27,19 +27,37 @@ const Container = styled.header`
       height: 36.83px;
     }
 
-    & > svg {
-      cursor: pointer;
+    .cart {
+      position: relative;
+
+      & > svg {
+        cursor: pointer;
+      }
+
+      & > span {
+        width: 24px;
+        height: 24px;
+
+        position: absolute;
+        top: -15px;
+        right: -15px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-weight: 900;
+        font-size: 14px;
+        color: var(--white);
+
+        border-radius: 7px;
+        background-color: var(--color-primary);
+      }
     }
   }
 
-  @media (max-width: 1300px) {
-    padding: 14.28px 16px 14px 16px;
-
-    & > div {
-      height: 139px;
-      flex-direction: column;
-      justify-content: space-around;
-    }
+  @media (max-width: 768px) {
+    padding: 14px 25px;
   }
 `;
 

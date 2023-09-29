@@ -23,8 +23,8 @@ const Dashboard = () => {
       </HelmetProvider>
       <Container>
         <Header />
-        <div>
-          <div>
+        <div className="div-container">
+          <div className="div-content">
             <List />
           </div>
         </div>

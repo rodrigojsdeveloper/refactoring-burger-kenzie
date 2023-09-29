@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const Container = styled.div`
-  & > div {
+const Container = styled.main`
+  & > .div-container {
     width: 100%;
 
     display: flex;
@@ -9,9 +9,9 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
 
-    padding: 26px 115px 26px 109.19px;
+    padding: 17px;
 
-    & > div {
+    & > .div-content {
       width: 100%;
       max-width: 1440px;
 

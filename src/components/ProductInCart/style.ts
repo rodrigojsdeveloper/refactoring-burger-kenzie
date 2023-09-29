@@ -28,24 +28,24 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 
     padding-left: 10px;
 
     & > .product-details {
+      height: 54px;
+
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
 
       & > h3 {
         font-weight: 700;
-        font-size: 14px;
-        line-height: 24px;
-
-        padding-bottom: 10px;
+        font-size: 17px;
 
         @media (max-width: 1300px) {
           width: 100%;
-          max-width: 100px;
+          max-width: 150px;
           height: 25px;
 
           display: -webkit-box;
@@ -57,11 +57,11 @@ const Container = styled.div`
       }
 
       & > p {
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 16px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
 
-        color: var(--grey-50);
+        color: var(--color-primary);
       }
     }
 
@@ -89,7 +89,8 @@ const Container = styled.div`
 
       & > .product-quantity {
         width: 100%;
-        max-width: 70px;
+        max-width: 75px;
+        min-width: 63px;
 
         button,
         span {
@@ -114,7 +115,7 @@ const Container = styled.div`
           width: 20px;
           height: 20px;
 
-          padding: 0.5px 5px 1px;
+          padding: 0.5px 8px 1.5px;
 
           border-top: 1px solid var(--grey-20);
           border-bottom: 1px solid var(--grey-20);

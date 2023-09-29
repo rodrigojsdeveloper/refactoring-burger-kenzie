@@ -21,7 +21,7 @@ const Product = ({ product }: IProductComponent) => {
         <span>R$ {product.price.toFixed(2).replace(".", ",")}</span>
 
         <Button
-          size="medium"
+          size="106px"
           color="grey-green"
           onClick={() => handleAddToCart(product)}
         >

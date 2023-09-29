@@ -32,7 +32,7 @@ const CartWithProducts = () => {
           </span>
         </div>
 
-        <Button size="default" color="grey" onClick={handleClearCart}>
+        <Button color="grey" onClick={handleClearCart}>
           Remover todos
         </Button>
       </div>
