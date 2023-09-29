@@ -49,7 +49,9 @@ export interface IProductContextData {
   handleAddToCart: (product: IProductProps) => void;
   handleRemoveFromCart: (product: IProductProps) => void;
   handleClickCartProduct: (product: IProductProps) => void;
-  handleClearCart: () => void;
+  handleClearCart: (
+    setLoading: React.Dispatch<React.SetStateAction<boolean>>
+  ) => void;
 }
 
 export interface IChildren {

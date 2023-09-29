@@ -21,13 +21,17 @@ const List = () => {
       {loading ? (
         <Loading />
       ) : filteredProducts.length > 0 ? (
-        filteredProducts.map((product) => (
-          <Product product={product} key={product.id} />
-        ))
+        <menu>
+          {filteredProducts.map((product) => (
+            <Product product={product} key={product.id} />
+          ))}
+        </menu>
       ) : (
-        products.map((product) => (
-          <Product product={product} key={product.id} />
-        ))
+        <menu>
+          {products.map((product) => (
+            <Product product={product} key={product.id} />
+          ))}
+        </menu>
       )}
     </Container>
   );

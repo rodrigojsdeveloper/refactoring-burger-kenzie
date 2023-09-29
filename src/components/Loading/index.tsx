@@ -2,10 +2,12 @@ import { Container } from "./style";
 
 const Loading = () => (
   <Container>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div className="loading">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </Container>
 );
 

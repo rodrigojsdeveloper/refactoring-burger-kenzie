@@ -1,10 +1,11 @@
 import { ProductContext } from "../../contexts/product.context";
 import { ProductInCart } from "../ProductInCart";
+import { IModalCart } from "../../interfaces";
 import { Container } from "./style";
 import { Button } from "../Button";
 import { useContext } from "react";
 
-const CartWithProducts = () => {
+const CartWithProducts = ({ setModal }: IModalCart) => {
   const { cartProducts, handleClearCart } = useContext(ProductContext);
 
   return (
@@ -32,7 +33,7 @@ const CartWithProducts = () => {
           </span>
         </div>
 
-        <Button color="grey" onClick={handleClearCart}>
+        <Button color="grey" onClick={() => handleClearCart(setModal)}>
           Remover todos
         </Button>
       </div>

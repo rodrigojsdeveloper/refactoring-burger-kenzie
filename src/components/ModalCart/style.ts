@@ -1,3 +1,4 @@
+import { animationCart } from "../../animations";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -6,6 +7,8 @@ const Container = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  animation: ${animationCart} 1s;
 
   & > .div-cart {
     width: 100%;

@@ -29,7 +29,11 @@ const ModalCart = ({ setModal }: IModalCart) => {
         </svg>
       </div>
 
-      {cartProducts.length > 0 ? <CartWithProducts /> : <CartEmpty />}
+      {cartProducts.length > 0 ? (
+        <CartWithProducts setModal={setModal} />
+      ) : (
+        <CartEmpty />
+      )}
     </Container>
   );
 };

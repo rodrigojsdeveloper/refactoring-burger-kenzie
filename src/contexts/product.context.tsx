@@ -65,7 +65,12 @@ export const ProductContextProvider = ({ children }: IChildren) => {
   const handleClickCartProduct = (product: IProductProps) =>
     setCartProducts(cartProducts.filter((p) => p.id !== product.id));
 
-  const handleClearCart = () => setCartProducts([]);
+  const handleClearCart = (
+    setModal: React.Dispatch<React.SetStateAction<boolean>>
+  ) => {
+    setModal(false);
+    setCartProducts([]);
+  };
 
   return (
     <ProductContext.Provider
