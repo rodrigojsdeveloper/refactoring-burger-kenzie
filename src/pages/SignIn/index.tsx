@@ -8,7 +8,7 @@ const SignIn = () => {
   return (
     <React.Fragment>
       <HelmetProvider>
-        <Helmet title="Iniciar Sessão | Burger Kenzie" />
+        <Helmet title="Entrar | Burger Kenzie" />
       </HelmetProvider>
       <Container>
         <LogoDetails />

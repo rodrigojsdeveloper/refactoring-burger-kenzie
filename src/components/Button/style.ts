@@ -69,6 +69,9 @@ const Container = styled.button<IButtonStyle>`
 
       case "grey-green":
         return css`
+          font-size: 14px;
+          line-height: 16.94px;
+
           border-color: var(--grey-10);
           background-color: var(--grey-10);
         `;

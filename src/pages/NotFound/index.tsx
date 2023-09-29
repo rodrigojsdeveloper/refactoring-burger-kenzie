@@ -1,12 +1,9 @@
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import logo from "../../assets/LogoKenzieBurguer.svg";
-import { Link } from "react-router-dom";
 import { Container } from "./style";
 import React from "react";
 
 const NotFound = () => {
-  const token = localStorage.getItem("Burger Kenzie: token");
-
   const currentUrl = window.location.href.split("/")[3];
 
   return (
@@ -17,9 +14,7 @@ const NotFound = () => {
       <Container>
         <div>
           <div>
-            <Link to={token ? "/dashboard" : "/"}>
-              <img src={logo} alt="burger kezie" />
-            </Link>
+            <img src={logo} alt="burger kezie" />
 
             <p>
               <b>404.</b> Isso é um erro.

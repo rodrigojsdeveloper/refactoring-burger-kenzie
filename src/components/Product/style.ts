@@ -3,7 +3,6 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100%;
   max-width: 280px;
-  height: 346px;
 
   background-color: var(--white);
   border: 2px solid var(--grey-20);
@@ -45,7 +44,7 @@ const Container = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
 
-    padding: 16px 19px 23px 20px;
+    padding: 20px;
 
     h3,
     span {

@@ -19,7 +19,7 @@ const Dashboard = () => {
   return (
     <React.Fragment>
       <HelmetProvider>
-        <Helmet title="Burger Kenzie" />
+        <Helmet title="Dashboard | Burger Kenzie" />
       </HelmetProvider>
       <Container>
         <Header />

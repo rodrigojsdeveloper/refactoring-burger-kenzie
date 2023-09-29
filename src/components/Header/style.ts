@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 const Container = styled.header`
   width: 100%;
+  height: 80px;
 
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 
-  padding: 10px 115px 10px 109.19px;
+  padding: 20px 118px;
 
   background-color: var(--grey-0);
 

@@ -8,7 +8,7 @@ const SignUp = () => {
   return (
     <React.Fragment>
       <HelmetProvider>
-        <Helmet title="Cadastro | Burger Kenzie" />
+        <Helmet title="Cadastrar | Burger Kenzie" />
       </HelmetProvider>
       <Container className="signup">
         <FormSignUp />

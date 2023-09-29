@@ -17,7 +17,6 @@ export default createGlobalStyle`
     --color-primary-50: #129B4C;
     --color-primary-75: #28834E;
     --color-primary-100: #F6FFFA;
-    --color-secondary: #EB5757;
 
     // Grey Scale Palette
     --gray-100: #333333;
@@ -28,17 +27,11 @@ export default createGlobalStyle`
     --grey-0: #F5F5F5;
     --white: #FFFFFF;
 
-    // Feedback Palette
-    --negative: #E60000;
-    --warning: #FFCD07;
-    --sucess: #168821;
-    --information: #155BCB;
-
     // Shadow
     --shadow: #00000040;
 
     // Border Radius
-    --border-radius: 0px;
+    --border-radius: 5px;
 	}
 
 	body {
