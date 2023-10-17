@@ -24,8 +24,6 @@ const Container = styled.div`
   }
 
   & > p {
-    padding-left: 15px;
-
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -34,13 +32,12 @@ const Container = styled.div`
     max-width: 348px;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 640px) {
     height: auto;
     flex-direction: column;
+    row-gap: 12.5px;
 
-    & > figure {
-      margin-bottom: 10px;
-    }
+    text-align: center;
   }
 `;
 

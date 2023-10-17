@@ -1,10 +1,10 @@
-import { IProductProps, IProductContextData, IChildren } from "../interfaces";
-import { createContext, useState } from "react";
+import { IProductProps, IProductContextData } from "../interfaces";
+import { createContext, useState, PropsWithChildren } from "react";
 import { api } from "../services/api";
 
-export const ProductContext = createContext({} as IProductContextData);
+const ProductContext = createContext({} as IProductContextData);
 
-export const ProductContextProvider = ({ children }: IChildren) => {
+const ProductContextProvider = ({ children }: PropsWithChildren) => {
   const [products, setProducts] = useState<IProductProps[]>([]);
 
   const [cartProducts, setCartProducts] = useState<IProductProps[]>([]);
@@ -72,23 +72,25 @@ export const ProductContextProvider = ({ children }: IChildren) => {
     setCartProducts([]);
   };
 
+  const productContextData: IProductContextData = {
+    products,
+    setProducts,
+    cartProducts,
+    setCartProducts,
+    filteredProducts,
+    setFilteredProducts,
+    fecthProducts,
+    handleAddToCart,
+    handleRemoveFromCart,
+    handleClickCartProduct,
+    handleClearCart,
+  };
+
   return (
-    <ProductContext.Provider
-      value={{
-        products,
-        setProducts,
-        cartProducts,
-        setCartProducts,
-        filteredProducts,
-        setFilteredProducts,
-        fecthProducts,
-        handleAddToCart,
-        handleRemoveFromCart,
-        handleClickCartProduct,
-        handleClearCart,
-      }}
-    >
+    <ProductContext.Provider value={productContextData}>
       {children}
     </ProductContext.Provider>
   );
 };
+
+export { ProductContext, ProductContextProvider };

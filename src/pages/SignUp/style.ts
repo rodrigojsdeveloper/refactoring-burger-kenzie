@@ -11,7 +11,7 @@ const Container = styled.main`
   align-items: center;
 
   margin: auto;
-  padding: 20px;
+  padding: 20px 8px;
 
   @media (max-width: 1024px) {
     flex-direction: column-reverse;

@@ -9,7 +9,7 @@ const Container = styled.main`
   justify-content: center;
   align-items: flex-start;
 
-  padding: 150px 15px 15px 15px;
+  padding: 150px 8px 15px;
 
   & > div {
     width: 100%;

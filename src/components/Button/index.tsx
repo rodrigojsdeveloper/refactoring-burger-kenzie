@@ -1,4 +1,5 @@
 import { IButtonProps } from "../../interfaces";
+import { PropsWithChildren } from "react";
 import { Container } from "./style";
 
 const Button = ({
@@ -8,7 +9,7 @@ const Button = ({
   onClick,
   type,
   disabled,
-}: IButtonProps) => {
+}: PropsWithChildren<IButtonProps>) => {
   return (
     <Container
       color={color}

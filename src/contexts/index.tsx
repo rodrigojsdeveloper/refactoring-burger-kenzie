@@ -1,7 +1,7 @@
 import { ProductContextProvider } from "./product.context";
-import { IChildren } from "../interfaces";
+import { PropsWithChildren } from "react";
 
-const Providers = ({ children }: IChildren) => {
+const Providers = ({ children }: PropsWithChildren) => {
   return <ProductContextProvider>{children}</ProductContextProvider>;
 };
 

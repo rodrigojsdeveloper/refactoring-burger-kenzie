@@ -39,16 +39,6 @@ const Container = styled.form`
   & > .div-content {
     width: 100%;
   }
-
-  @media (max-width: 375px) {
-    height: 425px;
-
-    & > .div-container {
-      height: 50px;
-
-      flex-direction: column;
-    }
-  }
 `;
 
 export { Container };

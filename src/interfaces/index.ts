@@ -1,7 +1,6 @@
 import { FieldValues, UseFormRegister } from "react-hook-form";
 
 export interface IButtonProps {
-  children: React.ReactNode;
   color: "green" | "grey" | "grey-green";
   size?: "106px";
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
@@ -52,10 +51,6 @@ export interface IProductContextData {
   handleClearCart: (
     setLoading: React.Dispatch<React.SetStateAction<boolean>>
   ) => void;
-}
-
-export interface IChildren {
-  children: React.ReactNode;
 }
 
 export interface IModalCart {
